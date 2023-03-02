@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ushmani Garg's Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: orangered;
+
+            height: 100vh;
+            padding: 25px;
+            width: 450px;
+        }
+
+        .sidebar nav {
+            padding: 20px
+        }
+
+        .sidebar nav li {
+            list-style: none;
+            font-size: 20px;
+            padding-top: 30px;
+            cursor: pointer;
+        }
+
+        .sidebar nav li a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .main {
+            background-color: antiquewhite;
+            width: 1000vw;
+        }
+
+        .infocontainer {
+            background-color: green;
+            padding: 30px;
+            width: 80vw;
+            margin: 100px auto;
+            height: 50vh;
+            display: flex;
+        }
+
+        .info {
+            display: flex;
+            align-items: left;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hello {
+            font-size: 90px;
+        }
+
+        .about {
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        .button button {
+            padding: 9px 14px;
+            border-radius: 20px;
+            color: white;
+            background-color: blueviolet;
+            font-weight: bold;
+            font-size: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .pic img {
+            height: 50vh;
+
+        }
+        .infocontainer h2{
+            margin:12px;
+        }
+        .skillcontainer{
+            padding: 12px;
+        }
+
+        .skill{
+            width: 230px;
+            height: 10px;
+            background-color: antiquewhite;
+        }
+
+        .skillitem{
+            display: flex;
+            align-items: center;
+        }
+
+        .hundred{
+            width: 200px;
+            background-color: antiquewhite;
+            border: 2px solid black;
+        }
+
+        .fifty{
+            width : 100px;
+            background-color: aquamarine;
+            border: 2px solid black;
+        }
+
+        .t5{
+            width: 50px;
+            background-color: bisque;
+            border: 2px solid black;
+        }
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        .sidebargo {
+            translate: transform(-30px, 0px);
+            position: absolute;
+        }
+
+        .cross {
+            margin-top: 10px;
+            margin-left: 90px;
+            position: absolute;
+
+        }
+    </style>
+     <script>
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebargo');
+            if (document.querySelector('.sidebar').classList.contains('sidebargo')) {
+                document.querySelector('.sidebar').style.display = 'inline'
+                document.querySelector('.hamburger').style.display = 'none'
+            }
+            else {
+                document.querySelector('.hamburger').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none'
+
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            Ushmani
+            <nav>
+                <li><a href="/portfolio.html">Home</a></li>
+                <li><a href="/intro.html">My Intro</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </nav>
+        </div>
+        <div class="main">
+            <img src="ham.jpg" alt="" class="hamburger" width="23px">
+            <img src="cross.png" alt="" class="cross" width="23px">
+            <div class="infocontainer">
+                <div class="info">
+                    <h2>About Me</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nisi illum laborum.
+                        Exercitationem amet eveniet facere ullam temporibus esse quisquam debitis. Necessitatibus minus
+                        totam nesciunt ex ab quam, rem, mollitia quas nostrum nulla eveniet repellendus voluptatum!
+                        Earum nostrum voluptatum iusto ipsum quis maiores quidem.
+                        <div class="skillcontainer">
+                        <h2>My Skills</h2>
+                        <div class="skillitem">HTML:<div class="skill hundred"></div></div>
+                        <div class="skillitem">CSS:<div class="skill hundred"></div></div>
+                        <div class="skillitem">JavaScript:<div class="skill t5"></div></div>
+                        <div class="skillitem">SEO:<div class="skill fifty"></div></div>
+
+                            </div>
+                    </div>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

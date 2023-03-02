@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ushmani Garg's Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: orangered;
+
+            height: 100vh;
+            padding: 25px;
+            width: 450px;
+        }
+
+        .sidebar nav {
+            padding: 20px
+        }
+
+        .sidebar nav li {
+            list-style: none;
+            font-size: 20px;
+            padding-top: 30px;
+            cursor: pointer;
+        }
+
+        .sidebar nav li a {
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .main {
+            background-color: antiquewhite;
+            width: 1000vw;
+        }
+
+        .blogitem{
+                margin: 20px;
+            
+        }
+
+        .blogcontainer h1{
+            margin: 23px;
+        }
+
+        .blogitem button{
+        padding: 9px 14px;
+        border-radius: 20px;
+        color: white;
+        background-color: blueviolet;
+        font-weight: bold;
+        font-size: 10px;
+        margin: 5px;
+        cursor: pointer;
+    }
+    .hamburger {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        .sidebargo {
+            translate: transform(-30px, 0px);
+            position: absolute;
+        }
+
+        .cross {
+            margin-top: 10px;
+          
+            position: absolute;
+
+        }
+    </style>
+     <script>
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebargo');
+            if (document.querySelector('.sidebar').classList.contains('sidebargo')) {
+                document.querySelector('.sidebar').style.display = 'inline'
+                document.querySelector('.hamburger').style.display = 'none'
+            }
+            else {
+                document.querySelector('.hamburger').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none'
+
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <nav>
+                <li><a href="/portfolio.html">Home</a></li>
+                <li><a href="/intro.html">My Intro</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </nav>
+        </div>
+        <div class="main">
+            <img src="ham.jpg" alt="" class="hamburger" width="23px">
+            <img src="cross.png" alt="" class="cross" width="23px">
+            <DIV class="blogcontainer">
+                <div class="blogitem">
+                <h1>Blogs on Development</h1>
+                <h2>Get Tech News Here</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis magnam aperiam odio ipsum
+                    quidem, sit assumenda, voluptatem asperiores corrupti eum quisquam, commodi labore alias
+                    perspiciatis consequatur provident repellendus? Recusandae hic est, dignissimos assumenda veritatis
+                    accusantium esse autem sequi, modi quas vero temporibus? Quasi, laboriosam aperiam ad iste minima
+                    natus soluta dolorum ea, provident beatae vel. Reprehenderit cupiditate velit iste enim voluptatum
+                    nulla veritatis officia. Vero omnis cumque mollitia, id tempore iste hic voluptatum ducimus suscipit
+                    nam explicabo, numquam quia quas tenetur, veritatis ipsam nobis? Totam, id distinctio rerum
+                    voluptatum velit ratione iure expedita maxime recusandae eligendi ab ipsam quas explicabo fugiat
+                    commodi quam quidem? Sapiente, voluptatem soluta aspernatur ut praesentium adipisci nam voluptatum
+                    id repudiandae molestiae in sit dicta harum. Dolore eveniet consectetur, quia asperiores
+                    reprehenderit mollitia fugiat quam quos libero. Ratione ipsam dolores possimus neque, dicta animi
+                    voluptas ex quo a labore repellendus. <br>
+                    <button class="button">Read More</button>
+                </p>
+            </div>
+
+            <div class="blogitem">
+                <h2>Get Tech News Here</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis magnam aperiam odio ipsum
+                    quidem, sit assumenda, voluptatem asperiores corrupti eum quisquam, commodi labore alias
+                    perspiciatis consequatur provident repellendus? Recusandae hic est, dignissimos assumenda veritatis
+                    accusantium esse autem sequi, modi quas vero temporibus? Quasi, laboriosam aperiam ad iste minima
+                    natus soluta dolorum ea, provident beatae vel. Reprehenderit cupiditate velit iste enim voluptatum
+                    nulla veritatis officia. Vero omnis cumque mollitia, id tempore iste hic voluptatum ducimus suscipit
+                    nam explicabo, numquam quia quas tenetur, veritatis ipsam nobis? Totam, id distinctio rerum
+                    voluptatum velit ratione iure expedita maxime recusandae eligendi ab ipsam quas explicabo fugiat
+                    commodi quam quidem? Sapiente, voluptatem soluta aspernatur ut praesentium adipisci nam voluptatum
+                    id repudiandae molestiae in sit dicta harum. Dolore eveniet consectetur, quia asperiores
+                    reprehenderit mollitia fugiat quam quos libero. Ratione ipsam dolores possimus neque, dicta animi
+                    voluptas ex quo a labore repellendus.<br>
+                    <button class="button">Read More</button>
+                </p>
+            </div>
+
+            <div class="blogitem">
+                <h2>Get Tech News Here</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis magnam aperiam odio ipsum
+                    quidem, sit assumenda, voluptatem asperiores corrupti eum quisquam, commodi labore alias
+                    perspiciatis consequatur provident repellendus? Recusandae hic est, dignissimos assumenda veritatis
+                    accusantium esse autem sequi, modi quas vero temporibus? Quasi, laboriosam aperiam ad iste minima
+                    natus soluta dolorum ea, provident beatae vel. Reprehenderit cupiditate velit iste enim voluptatum
+                    nulla veritatis officia. Vero omnis cumque mollitia, id tempore iste hic voluptatum ducimus suscipit
+                    nam explicabo, numquam quia quas tenetur, veritatis ipsam nobis? Totam, id distinctio rerum
+                    voluptatum velit ratione iure expedita maxime recusandae eligendi ab ipsam quas explicabo fugiat
+                    commodi quam quidem? Sapiente, voluptatem soluta aspernatur ut praesentium adipisci nam voluptatum
+                    id repudiandae molestiae in sit dicta harum. Dolore eveniet consectetur, quia asperiores
+                    reprehenderit mollitia fugiat quam quos libero. Ratione ipsam dolores possimus neque, dicta animi
+                    voluptas ex quo a labore repellendus. <br>
+                    <button class="button">Read More</button>
+                </p>
+            </div>
+
+            </DIV>
+
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>

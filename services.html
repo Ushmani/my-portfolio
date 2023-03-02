@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ushmani Garg's Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: orangered;
+        
+            height: 100vh;
+            padding: 25px;
+            width: 450px;
+        }
+
+        .sidebar nav{
+            padding: 20px
+        }
+
+        .sidebar nav li{
+            list-style: none;
+            font-size: 20px;
+            padding-top: 30px;
+            cursor: pointer;
+        }
+
+        .sidebar nav li a{
+            text-decoration: none;
+            color: white;
+        }
+
+
+        .main {
+            background-color: antiquewhite;
+            width: 1000vw;
+        }
+
+        .infocontainer{
+            background-color: brown;
+            padding: 30px;
+            width: 80vw;
+            margin: 100px auto;
+            height: 50vh;
+            display: flex;
+        }
+
+    .info{
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hello{
+        font-size: 90px;
+    }
+    .about{
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    .button button{
+        padding: 9px 14px;
+        border-radius: 20px;
+        color: white;
+        background-color: blueviolet;
+        font-weight: bold;
+        font-size: 10px;
+        margin: 5px;
+        cursor: pointer;
+    }
+        .pic img{
+            height: 50vh;
+
+        }
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+        }
+
+        .sidebargo {
+            translate: transform(-30px, 0px);
+            position: absolute;
+        }
+
+        .cross {
+            margin-top: 10px;
+            margin-left: 90px;
+            position: absolute;
+
+        }
+    </style>
+     <script>
+        document.querySelector('.cross').style.display = 'none';
+        document.querySelector('.hamburger').addEventListener("click", () => {
+            document.querySelector('.sidebar').classList.toggle('sidebargo');
+            if (document.querySelector('.sidebar').classList.contains('sidebargo')) {
+                document.querySelector('.sidebar').style.display = 'inline'
+                document.querySelector('.hamburger').style.display = 'none'
+            }
+            else {
+                document.querySelector('.hamburger').style.display = 'inline'
+                document.querySelector('.cross').style.display = 'none'
+
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            Ushmani
+            <nav>
+                <li><a href ="/portfolio.html">Home</a></li>
+                <li><a href ="/intro.html">My Intro</a></li>
+                <li><a href ="/services.html">Services</a></li>
+                <li><a href ="/contact.html">Contact</a></li>
+                <li><a href ="/blog.html">Blog</a></li>
+            </nav>
+        </div>
+            <div class="main">
+                <img src="ham.jpg" alt="" class="hamburger" width="23px">
+            <img src="cross.png" alt="" class="cross" width="23px">
+                <div class="infocontainer">
+                    <div class="info">
+                    <div class="hello">Hello</div>
+                    <div class="about">I am Ushmani Garg, a skilled digital marketer with over five years of experience in the industry. With a strong
+                        understanding of the latest trends and best practices in digital marketing, I have helped many
+                        businesses achieve their online marketing goals. However, in recent times, I have been eager to
+                        expand his skill set and explore new career opportunities. Therefore, I decided to embark on a new
+                        journey and is currently learning web development on her own. With a passion for creating dynamic and
+                        user-friendly websites, I committed to mastering web development and creating compelling
+                        digital experiences for users.</div>
+                        <div class="button">
+                        <button>Download My CV</button>
+                        <a href = "/contact.html"><button>Contact Me</a></button>
+                        </div>
+                    </div>
+                    <div class="pic">
+                        <img src="PngItem_4443026.png" alt="Developer">
+                    </div>
+                
+                </div>
+            </div>
+    
+    </div>
+</body>
+
+</html>
